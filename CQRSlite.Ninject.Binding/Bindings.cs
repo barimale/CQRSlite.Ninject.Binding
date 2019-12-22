@@ -22,7 +22,7 @@ namespace CQRSlite.Ninject.Binding
             Kernel.Bind(x =>
             {
                 x.From(
-                    typeof(CommandHandlers).GetTypeInfo().Assembly)
+                    typeof(ICommandHandlers).GetTypeInfo().Assembly)
                     .SelectAllClasses()
                     .Where(p =>
                     {
@@ -38,7 +38,7 @@ namespace CQRSlite.Ninject.Binding
 
             var registerer = new RouteRegistrar(new Provider(new NinjectServiceLocator(Kernel)));
             registerer.RegisterInAssemblyOf(
-                typeof(CommandHandlers));
+                typeof(ICommandHandlers));
         }
 
         public class Provider : IServiceProvider
