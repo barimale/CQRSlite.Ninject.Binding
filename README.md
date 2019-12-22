@@ -1,0 +1,1 @@
+# CQRSlite.Ninject.Binding
