@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>UT.CQRSlite.Ninject.Binding.NETCore30</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>UT.CQRSlite.Ninject.Binding.NETCore3.0</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQRSlite.Ninject.Binding\CQRSlite.Ninject.Binding.csproj" />
+  </ItemGroup>
+
+</Project>

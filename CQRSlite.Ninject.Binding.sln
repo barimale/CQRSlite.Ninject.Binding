@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSlite.Ninject.Binding", "CQRSlite.Ninject.Binding\CQRSlite.Ninject.Binding.csproj", "{A3EEF84D-208F-4A7E-9301-42D23B2D1740}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UT.CQRSlite.Ninject.Binding.NETCore3.0", "UT.CQRSlite.Ninject.Binding.NETStandard2.0\UT.CQRSlite.Ninject.Binding.NETCore3.0.csproj", "{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{A3EEF84D-208F-4A7E-9301-42D23B2D1740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3EEF84D-208F-4A7E-9301-42D23B2D1740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3EEF84D-208F-4A7E-9301-42D23B2D1740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
