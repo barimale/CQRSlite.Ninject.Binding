@@ -10,12 +10,12 @@ According to this, as a first step, some bindings have to be added in regular wa
 
 ```
 Bind<IStoreEvents, ISnapshotStore, ISnapshotManager>()
-.To<SnapshotStore>()
-.InSingletonScope();
+	.To<SnapshotStore>()
+	.InSingletonScope();
 
 Bind<IEventStore>()
-.To<EventStore>()
-.InSingletonScope();
+	.To<EventStore>()
+	.InSingletonScope();
 ```
 
 Then, as a next step, CQRSlite.Ninject.Bindings.Binding has to be invoked as follows:
