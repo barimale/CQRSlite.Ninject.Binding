@@ -1,5 +1,4 @@
-﻿using System;
-using CQRSlite.Domain;
+﻿using CQRSlite.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ninject;
 
@@ -12,6 +11,7 @@ namespace UT.CQRSlite.Ninject.Binding.NET47
         public void I_d_like_to_have_bindings_loaded_correctly()
         {
             //given
+
             StandardKernel kernel = new StandardKernel(new global::CQRSlite.Ninject.Binding.Bindings());
 
             //when

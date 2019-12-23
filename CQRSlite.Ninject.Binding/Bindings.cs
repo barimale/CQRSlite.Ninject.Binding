@@ -4,7 +4,6 @@ using CQRSlite.Domain;
 using CQRSlite.Events;
 using CQRSlite.Ninject.Binding.WriteModel.Handlers;
 using CQRSlite.Routing;
-using CQRSlite.Snapshotting;
 using Ninject.Modules;
 
 namespace CQRSlite.Ninject.Binding
@@ -23,14 +22,7 @@ namespace CQRSlite.Ninject.Binding
 
             Bind<IRepository>()
                 .To<Repository>()
-                .WhenInjectedExactlyInto(typeof(SnapshotRepository))
-                .InSingletonScope();
-
-            Bind<IRepository>()
-                .To<SnapshotRepository>()
-                .WithConstructorArgument(typeof(ISnapshotStore))
-                .WithConstructorArgument(typeof(ISnapshotStrategy))
-                .WithConstructorArgument(typeof(IRepository))
+                .InSingletonScope()
                 .WithConstructorArgument(typeof(IEventStore));
 
             Bind<ISession>()
