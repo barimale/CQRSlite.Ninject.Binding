@@ -1,14 +1,11 @@
-﻿using CommonServiceLocator.NinjectAdapter.Unofficial;
+﻿using CQRSlite.Caching;
+using CQRSlite.Commands;
 using CQRSlite.Domain;
-using CQRSlite.Messages;
+using CQRSlite.Events;
 using CQRSlite.Ninject.Binding.WriteModel.Handlers;
 using CQRSlite.Routing;
-using Microsoft.Practices.ServiceLocation;
-using Ninject.Extensions.Conventions;
+using CQRSlite.Snapshotting;
 using Ninject.Modules;
-using System;
-using System.Linq;
-using System.Reflection;
 
 namespace CQRSlite.Ninject.Binding
 {
@@ -16,44 +13,32 @@ namespace CQRSlite.Ninject.Binding
     {
         public override void Load()
         {
+            Bind<ICommandSender, IEventPublisher, IHandlerRegistrar>()
+                .To<Router>()
+                .InSingletonScope();
+
+            Bind<ICache>()
+                .To<MemoryCache>()
+                .InSingletonScope();
+
+            Bind<IRepository>()
+                .To<Repository>()
+                .WhenInjectedExactlyInto(typeof(SnapshotRepository))
+                .InSingletonScope();
+
+            Bind<IRepository>()
+                .To<SnapshotRepository>()
+                .WithConstructorArgument(typeof(ISnapshotStore))
+                .WithConstructorArgument(typeof(ISnapshotStrategy))
+                .WithConstructorArgument(typeof(IRepository))
+                .WithConstructorArgument(typeof(IEventStore));
+
             Bind<ISession>()
                 .To<Session>();
 
-            Kernel.Bind(x =>
-            {
-                x.From(
-                    typeof(ICommandHandlers).GetTypeInfo().Assembly)
-                    .SelectAllClasses()
-                    .Where(p =>
-                    {
-                        var allInterfaces = p.GetInterfaces();
-                        return
-                            allInterfaces.Any(y => y.GetTypeInfo().IsGenericType && y.GetTypeInfo().GetGenericTypeDefinition() == typeof(IHandler<>)) ||
-                            allInterfaces.Any(y => y.GetTypeInfo().IsGenericType && y.GetTypeInfo().GetGenericTypeDefinition() == typeof(ICancellableHandler<>));
-                    })
-                .BindToSelf();
-            });
+            Helper.BindHandlerBy(typeof(ICommandHandler));
 
-            ServiceLocator.SetLocatorProvider(() => new NinjectServiceLocator(Kernel));
-
-            var registerer = new RouteRegistrar(new Provider(new NinjectServiceLocator(Kernel)));
-            registerer.RegisterInAssemblyOf(
-                typeof(ICommandHandlers));
-        }
-
-        public class Provider : IServiceProvider
-        {
-            private readonly IServiceLocator _serviceProvider;
-
-            public Provider(IServiceLocator serviceProvider)
-            {
-                _serviceProvider = serviceProvider;
-            }
-
-            public object GetService(Type serviceType)
-            {
-                return _serviceProvider.GetService(serviceType);
-            }
+            Kernel.RegisterInAssemblyOf(typeof(ICommandHandler));
         }
     }
 }

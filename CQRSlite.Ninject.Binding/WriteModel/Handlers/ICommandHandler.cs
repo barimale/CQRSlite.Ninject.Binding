@@ -1,6 +1,6 @@
 ﻿namespace CQRSlite.Ninject.Binding.WriteModel.Handlers
 {
-    public interface ICommandHandlers
+    public interface ICommandHandler
     {
         //intentionally left blank
     }
