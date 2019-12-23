@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSlite.Ninject.Binding", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UT.CQRSlite.Ninject.Binding.NETCore3.0", "UT.CQRSlite.Ninject.Binding.NETStandard2.0\UT.CQRSlite.Ninject.Binding.NETCore3.0.csproj", "{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT.CQRSlite.Ninject.Binding.NET47", "UT.CQRSlite.Ninject.Binding.NET47\UT.CQRSlite.Ninject.Binding.NET47.csproj", "{7D17A520-0AB1-47B0-8687-6B9F64D07F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
