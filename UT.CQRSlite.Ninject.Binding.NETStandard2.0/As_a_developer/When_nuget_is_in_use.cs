@@ -1,6 +1,7 @@
 ﻿using CQRSlite.Domain;
 using Ninject;
 using NUnit.Framework;
+using UT.CQRSlite.Ninject.Binding.NETCore30.Preconfiguration;
 
 namespace UT.CQRSlite.Ninject.Binding.NETCore3._0
 {
@@ -10,7 +11,9 @@ namespace UT.CQRSlite.Ninject.Binding.NETCore3._0
         public void I_d_like_to_have_bindings_loaded_correctly()
         {
             //given
-            StandardKernel kernel = new StandardKernel(new global::CQRSlite.Ninject.Binding.Bindings());
+            StandardKernel kernel = new StandardKernel(
+                new DummyBindings(),
+                new global::CQRSlite.Ninject.Binding.Bindings());
 
             //when
             var library = kernel.Get<ISession>();

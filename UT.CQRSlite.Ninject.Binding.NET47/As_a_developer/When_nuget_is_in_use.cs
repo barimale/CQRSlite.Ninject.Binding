@@ -1,6 +1,7 @@
 ﻿using CQRSlite.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ninject;
+using UT.CQRSlite.Ninject.Binding.NET47.Preconfiguration;
 
 namespace UT.CQRSlite.Ninject.Binding.NET47
 {
@@ -12,7 +13,9 @@ namespace UT.CQRSlite.Ninject.Binding.NET47
         {
             //given
 
-            StandardKernel kernel = new StandardKernel(new global::CQRSlite.Ninject.Binding.Bindings());
+            StandardKernel kernel = new StandardKernel(
+                new DummyBindings(), 
+                new global::CQRSlite.Ninject.Binding.Bindings());
 
             //when
             var library = kernel.Get<ISession>();
