@@ -1,4 +1,4 @@
-﻿using CommonServiceLocator.NinjectAdapter.Unofficial;
+﻿using CommonServiceLocator.NinjectAdapter.Extension;
 using CQRSlite.Messages;
 using CQRSlite.Routing;
 using Microsoft.Practices.ServiceLocation;
