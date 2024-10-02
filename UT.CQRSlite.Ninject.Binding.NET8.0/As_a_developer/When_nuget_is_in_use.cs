@@ -4,7 +4,7 @@ using Ninject;
 using NUnit.Framework;
 using UT.CQRSlite.Ninject.Binding.NETCore30.Preconfiguration;
 
-namespace UT.CQRSlite.Ninject.Binding.NETCore3._0
+namespace UT.CQRSlite.Ninject.Binding.net80.As_a_developer
 {
     public class When_nuget_is_in_use
     {

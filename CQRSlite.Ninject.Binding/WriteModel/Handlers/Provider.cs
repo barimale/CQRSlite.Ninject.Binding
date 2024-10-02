@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.ServiceLocation;
 using System;
 
-namespace CQRSlite.Ninject.Binding.WriteModel.Handlers
+namespace CQRSlite.Ninject.Bindings.WriteModel.Handlers
 {
     public class Provider : IServiceProvider
     {

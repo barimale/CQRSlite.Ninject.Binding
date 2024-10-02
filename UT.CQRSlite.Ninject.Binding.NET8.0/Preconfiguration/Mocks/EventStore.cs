@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace UT.CQRSlite.Ninject.Binding.NETCore30.Preconfiguration.Mocks
+namespace UT.CQRSlite.Ninject.Binding.net80.Preconfiguration.Mocks
 {
     public class EventStore : IEventStore
     {

@@ -1,4 +1,4 @@
-﻿namespace CQRSlite.Ninject.Binding.WriteModel.Handlers
+﻿namespace CQRSlite.Ninject.Bindings.WriteModel.Handlers
 {
     public interface ICommandHandler
     {

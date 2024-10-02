@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace CQRSlite.Ninject.Binding.WriteModel.Handlers
+namespace CQRSlite.Ninject.Bindings.WriteModel.Handlers
 {
     public static class Helper
     {

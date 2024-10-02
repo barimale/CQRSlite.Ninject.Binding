@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>UT.CQRSlite.Ninject.Binding.NETCore30</RootNamespace>
+    <RootNamespace>UT.CQRSlite.Ninject.Binding.net80</RootNamespace>
 
     <IsPackable>false</IsPackable>
 
-    <AssemblyName>UT.CQRSlite.Ninject.Binding.NETCore3.0</AssemblyName>
+    <AssemblyName>UT.CQRSlite.Ninject.Binding.net8.0</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

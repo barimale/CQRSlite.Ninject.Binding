@@ -2,11 +2,11 @@
 using CQRSlite.Commands;
 using CQRSlite.Domain;
 using CQRSlite.Events;
-using CQRSlite.Ninject.Binding.WriteModel.Handlers;
+using CQRSlite.Ninject.Bindings.WriteModel.Handlers;
 using CQRSlite.Routing;
 using Ninject.Modules;
 
-namespace CQRSlite.Ninject.Binding
+namespace CQRSlite.Ninject.Bindings
 {
     public class Bindings : NinjectModule
     {
