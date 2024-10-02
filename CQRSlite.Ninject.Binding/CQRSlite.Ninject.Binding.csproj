@@ -19,6 +19,10 @@
     <PackageReference Include="CommonServiceLocator.NinjectAdapter.Extension" Version="1.0.0" />
     <PackageReference Include="CqrsLite" Version="0.29.0" />
     <PackageReference Include="ninject.extensions.conventions" Version="3.3.0" />
+    <PackageReference Include="NuGet.CommandLine" Version="6.11.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
