@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29418.71
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F91979B-6EFF-4726-842B-B72A8B56D135}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UT.CQRSlite.Ninject.Binding.NETCore3.0", "UT.CQRSlite.Ninject.Binding.NETStandard2.0\UT.CQRSlite.Ninject.Binding.NETCore3.0.csproj", "{6F5C10FF-CE04-4E36-9625-FA8A0A9417F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT.CQRSlite.Ninject.Binding.NET47", "UT.CQRSlite.Ninject.Binding.NET47\UT.CQRSlite.Ninject.Binding.NET47.csproj", "{7D17A520-0AB1-47B0-8687-6B9F64D07F24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UT.CQRSlite.Ninject.Binding.NET8.0", "UT.CQRSlite.Ninject.Binding.NET8.0\UT.CQRSlite.Ninject.Binding.NET8.0.csproj", "{073FD111-CBFD-4900-A8A7-473CD64C2BC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D17A520-0AB1-47B0-8687-6B9F64D07F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073FD111-CBFD-4900-A8A7-473CD64C2BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073FD111-CBFD-4900-A8A7-473CD64C2BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073FD111-CBFD-4900-A8A7-473CD64C2BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073FD111-CBFD-4900-A8A7-473CD64C2BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
